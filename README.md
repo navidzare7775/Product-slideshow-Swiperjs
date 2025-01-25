@@ -4,8 +4,7 @@ Here's a concise and engaging description for your repo:
 
 # Product Slideshow Using SwiperJS
 
-This repository showcases a dynamic and interactive product slideshow implemented with [SwiperJS](SwiperJS
-). The slideshow features smooth transitions, responsive design, and customizable options to highlight various products effectively. Perfect for e-commerce websites, portfolios, and promotional pages, this project demonstrates how to create an appealing product display that enhances user experience.
+This repository showcases a dynamic and interactive product slideshow implemented with [SwiperJS](https://swiperjs.com/). The slideshow features smooth transitions, responsive design, and customizable options to highlight various products effectively. Perfect for e-commerce websites, portfolios, and promotional pages, this project demonstrates how to create an appealing product display that enhances user experience.
 
 ### Features
 - **Responsive Design:** Adapts seamlessly to different screen sizes and orientations.
