@@ -1,5 +1,3 @@
-Here's a concise and engaging description for your repo:
-
 ---
 
 # Product Slideshow Using SwiperJS
