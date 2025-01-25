@@ -14,9 +14,8 @@ This repository showcases a dynamic and interactive product slideshow implemente
 Clone the repository and install the necessary dependencies to get started.
 
 ```bash
-git clone https://github.com/yourusername/product-slideshow-swiperjs.git
+git clone https://github.com/navidzare7775/Product-slideshow-Swiperjs.git
 cd product-slideshow-swiperjs
-npm install
 ```
 
 ### Usage
