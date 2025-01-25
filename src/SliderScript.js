@@ -1,14 +1,14 @@
-const swiper = new Swiper(".swiper-container", {
+const swiper = new Swiper(".slider .swiper-container", {
   direction: 'horizontal',
   loop: true,
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.slider .swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".slider .swiper-button-next",
+    prevEl: ".slider .swiper-button-prev",
   },
   keyboard: {
     enabled: true,

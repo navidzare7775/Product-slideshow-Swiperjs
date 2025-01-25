@@ -1,0 +1,333 @@
+/* ====================================
+General Styles
+==================================== */
+
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,500i,600,600i,700,700i |Cormorant+SC:400,500,600,700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+:root {
+  /* font Weight */
+  --very-light: 100;
+  --light: 300;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  /* Design Color */
+  --midnight-blue: #0d0d1d;
+  --midnight-blue-bright: #444493;
+  --primary-color-faded: #ffd875; /* 60% */
+  --primary-color-very-faded: #f3ecdc; /* 60% */
+  --primary-color-bright: #f3ad00;
+  --primary-color-dark: #b38000;
+  --primary-color-very-dark: #332500;
+  --brand-color: #00bff3; /* 30% */
+  --brand-color-very-dark: #002833;
+  --call-to-action-color: #f30046; /* 10% */
+  --call-to-action-color-dark: #800024;
+  --call-to-action-color-bright: #ffccda;
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  /* Fonts */
+  --white-font-color: #ffffffdd;
+  --light-grey: #000000;
+  /* Card */
+  --card-width: 200px;
+  --card-height: 300px;
+  /* Indicator */
+  --indicator-duration: 0;
+  --slide-number-width: 500px;
+  --slide-number: 1;
+  /* General */
+  --progress-sub-background-color: #ffee0033;
+  --toggle-indicator-offset: 0;
+  --offset: 0;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--midnight-blue); /*Midnight Blue*/
+}
+
+main {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+  background: none; /* Remove any background */
+  border: none; /* Remove any border */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  font: inherit; /* Inherit font properties from parent */
+  cursor: inherit; /* Inherit cursor style */
+  outline: none; /* Remove outline */
+  cursor: pointer;
+}
+
+/*
+ *  scrollbar Style
+ */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+  .slider .page-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ====================================
+Home Slider
+==================================== */
+
+  .slider #home-slider {
+    height: 80vh;
+    width: 90vw;
+    position: relative;
+  }
+  .slider .swiper-container {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .slider .swiper-image-one {
+    background-image: url(https://images.unsplash.com/photo-1727216061295-c7231b99bbee?crop=entropy.slidercs=srgb.sliderfm=jpg.sliderixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzA3OTM4Nzd8.sliderixlib=rb-4.0.3.sliderq=85);
+  }
+
+  .slider .swiper-image-three {
+    background-image: url(https://images.unsplash.com/photo-1730073179855-072366d228e2?crop=entropy.slidercs=srgb.sliderfm=jpg.sliderixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzA3OTM4Nzd8.sliderixlib=rb-4.0.3.sliderq=85);
+  }
+
+  .slider .swiper-image-five {
+    background-image: url(https://images.unsplash.com/photo-1730204649506-38feffb05cd4?crop=entropy.slidercs=srgb.sliderfm=jpg.sliderixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzA3OTM5MDB8.sliderixlib=rb-4.0.3.sliderq=85);
+  }
+
+  .slider .swiper-image {
+    width: 50%;
+    height: 100%;
+    z-index: 3;
+  }
+  .slider .swiper-image-inner {
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    background-blend-mode: overlay;
+  }
+  .slider .swiper-image-inner.swiper-image-left {
+    padding: 4rem;
+  }
+  .slider .swiper-image-left {
+    filter: sepia(100%);
+    transition: all 1s linear;
+    transition-delay: 1s;
+  }
+  .slider .swiper-slide.swiper-slide-active .swiper-image-left {
+    filter: sepia(0%);
+  }
+  .slider .swiper-image-inner.swiper-image-right {
+    filter: hue-rotate(-60deg);
+    transition: all 1s linear;
+    transition-delay: 1s;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    background-blend-mode: multiply;
+  }
+
+  .slider h1 {
+    padding: auto;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    color: #fff;
+    align-self: flex-start;
+    margin: 0 0 auto 0;
+    font-size: 4.5rem;
+    line-height: 1;
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+  }
+  .slider h1 span.emphasis {
+    font-weight: 700;
+    font-style: italic;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+    transform: translate3d(-20%, 0, 0);
+    display: inline-block;
+  }
+  .slider h1 span:not(.emphasis) {
+    font-size: 3.5rem;
+  }
+  .slider p.paragraph {
+    margin: 0;
+    padding: 0 1.5em;
+    font-family: "Cormorant Garamond", serif;
+    color: #fff;
+    width: 100%;
+    max-width: 50ch;
+    text-align: justify;
+    font-size: 1.5em;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+    transform: translate3d(-20%, 0, 0);
+  }
+  .slider .swiper-slide.swiper-slide-active .swiper-image-right {
+    filter: hue-rotate(90deg);
+  }
+
+  .slider .swiper-slide.swiper-slide-active h1,
+  .slider .swiper-slide.swiper-slide-active p.paragraph,
+  .slider .swiper-slide.swiper-slide-active h1 span.emphasis,
+  .slider .swiper-slide.swiper-slide-active h1 + p {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .slider .swiper-button-next,
+  .slider .swiper-button-prev {
+    --swiper-navigation-size: 50px;
+    color: var(--call-to-action-color);
+  }
+
+  /* ====================================
+For the swiper Container and its styling
+==================================== */
+  .slider .swiper-container {
+    box-shadow: 0 40px 50px rgba(255, 255, 255, 0.3) inset;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+    /* Fix of Webkit flickering */
+    z-index: 1;
+  }
+
+  .slider .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+  }
+  .slider .swiper-container-android .swiper-slide,
+  .slider .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+  }
+  .slider .swiper-container-multirow > .swiper-wrapper {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    flex-wrap: wrap;
+  }
+  .slider .swiper-container-free-mode > .swiper-wrapper {
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+  }
+  .slider .swiper-slide {
+    -webkit-flex-shrink: 0;
+    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+  .slider .swiper-pagination-bullet {
+    border: 3px solid var(--primary-color-faded);
+    background-color: var(--primary-color-faded);
+    opacity: 0.6;
+  }
+  .slider .swiper-pagination-bullet-active {
+    border: 3px solid var(--primary-color-bright);
+    background-color: var(--primary-color-bright);
+    opacity: 1;
+  }
+
+
+/* ====================================
+Media Queries
+==================================== */
+@media screen and (max-width: 1280px) {
+  .slider h1 {
+    font-size: 3.9rem;
+  }
+  .slider h1 span:not(.emphasis) {
+    font-size: 2.9rem;
+  }
+  .slider h1 + p {
+    font-size: 13px;
+  }
+  .slider p.paragraph {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+}
+@media screen and (max-width: 960px) {
+  .slider h1 {
+    font-size: 3.5rem;
+  }
+  .slider h1 span:not(.emphasis) {
+    font-size: 2.5rem;
+  }
+  .slider p.paragraph {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .slider #home-slider {
+    height: 86vh;
+    width: 96vw;
+  }
+  .slider h1 {
+    font-size: 3.2rem;
+    align-self: center;
+  }
+  .slider h1 span:not(.emphasis) {
+    font-size: 2.1rem;
+  }
+  .slider p.paragraph {
+    max-width: 94%;
+  }
+}
